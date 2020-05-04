@@ -17,4 +17,3 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           repository: seesharprun/pandoc-build
           tags: latest
-          tag_with_sha: true
