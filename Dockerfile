@@ -1,4 +1,3 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 RUN apt-get update
 RUN apt-get install -y pandoc
-ENTRYPOINT [ "pandoc", "--version" ]
