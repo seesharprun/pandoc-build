@@ -1,5 +1,7 @@
 name: 'Push Container Image to Docker Hub'
 on:
+  schedule:
+    - cron: '0 1 */15 * *'
   push:
     branches:
       - master
@@ -16,4 +18,4 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           repository: seesharprun/pandoc-build
-          tags: latest
+          tags: latest, ${{ github.run_number }}

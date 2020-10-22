@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:devel
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get install --no-install-recommends --assume-yes \
